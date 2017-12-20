@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/page.css' %}">
+    <meta charset="UTF-8">
+    <h1>New post</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+</head>
+<body>
+
+</body>
+</html>

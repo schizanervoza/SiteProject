@@ -1,0 +1,18 @@
+
+<div>Привет</div>
+<form action="/logout">
+    <input type="submit" class="btn btn-primary" value="Выйти"/>
+</form>
+<a href="{% url 'post_new' %}" class="top-menu"></a>
+<form action="/new_post">
+    <input type="submit" class="btn btn-primary" value="Создать пост"/>
+</form>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <p>{{ post.author }}</p>
+    </div>
+{% endfor %}
